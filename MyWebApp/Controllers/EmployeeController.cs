@@ -22,6 +22,7 @@ namespace CrudOperationsInNetCore.Controllers
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployes()
         {
             if(_dbContext.employee == null){
+                
                 return NotFound();
             }
             return await _dbContext.employee.ToListAsync();
